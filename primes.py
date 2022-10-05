@@ -4,15 +4,9 @@
 def primes(number_of_primes):
     list = []
 
-    lower = 2
-    upper = number_of_primes
-
-    for num in range(lower, upper + 1):
-        for i in range(2, num):
-            if num % i == 0:
-                break
-            else:
+    for num in range(1, numbers_of_primes + 1):
+        for i in range(1, num):
+            while num%i != 0:
                 list.append(num)
-                
 
     return list
