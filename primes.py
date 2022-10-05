@@ -3,10 +3,16 @@
 
 def primes(number_of_primes):
     list = []
-    input = numbers_of_primes
-    for num in range(1, input + 1):
-        for i in range(1, num):
-            while num%i != 0:
-                list.append(num)
+    curr_num = 1
+    while len(list) <= number_of_primes:
+        if curr_num > 1:
+            for i in range(2, curr_num):
+                if curr_num % i == 0:
+                    break
+                else:
+                    list.append(curr_num)
+        else:
+            print(f'Prime numbers are greater than 1')
+        curr_num += 1
 
     return list
