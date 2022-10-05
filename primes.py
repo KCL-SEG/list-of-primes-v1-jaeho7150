@@ -3,14 +3,17 @@
 
 def primes(number_of_primes):
     list = []
-    list.append(2)
-    num = 3
+    current_num = 1
     while len(list) < number_of_primes:
-        while num > 1:
-            for i in range(2, num):
-                if num % i == 0:
+
+        if current_num > 1:
+            for i in range(2,current_num):
+                if (current_num % i) == 0:
                     break
-                else:
-                    list.append(num)
+            else:
+                list.append(current_num)
+    
+
+        current_num += 1
 
     return list
