@@ -13,6 +13,6 @@ def primes(number_of_primes):
                     list.append(curr_num)
         else:
             print(f'Prime numbers are greater than 1')
-        curr_num += 1
+            curr_num += 1
 
     return list
